@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dp3-ce-VfM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Animal Picker-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AnimalPicker" customModule="EnumTest3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g10-Lc-4Oh">
+                                <rect key="frame" x="180" y="290" width="54" height="30"/>
+                                <state key="normal" title="Unicorn"/>
+                                <connections>
+                                    <action selector="ChooseUnicorn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lR4-D9-JXK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qae-DM-Ca9">
+                                <rect key="frame" x="192" y="375" width="30" height="30"/>
+                                <state key="normal" title="Lion"/>
+                                <connections>
+                                    <action selector="ChooseLion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dGE-1Q-bIL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enum 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akJ-tt-1uo">
+                                <rect key="frame" x="159" y="137" width="96" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HO-vQ-5NR">
+                                <rect key="frame" x="164.5" y="537" width="85" height="30"/>
+                                <state key="normal" title="Pick by food"/>
+                                <connections>
+                                    <segue destination="LoR-xY-Hx9" kind="show" id="Ka8-g7-K0G"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1HO-vQ-5NR" firstAttribute="top" secondItem="qae-DM-Ca9" secondAttribute="bottom" constant="132" id="82V-eU-v9C"/>
+                            <constraint firstItem="akJ-tt-1uo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="BPr-E4-p0H"/>
+                            <constraint firstItem="qae-DM-Ca9" firstAttribute="top" secondItem="g10-Lc-4Oh" secondAttribute="bottom" constant="55" id="Cba-Bc-elW"/>
+                            <constraint firstItem="1HO-vQ-5NR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QV1-Ln-xGJ"/>
+                            <constraint firstItem="g10-Lc-4Oh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ugv-fb-ai9"/>
+                            <constraint firstItem="g10-Lc-4Oh" firstAttribute="top" secondItem="akJ-tt-1uo" secondAttribute="bottom" constant="118" id="XmP-NG-6RJ"/>
+                            <constraint firstItem="akJ-tt-1uo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eQR-hd-QI1"/>
+                            <constraint firstItem="qae-DM-Ca9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lVR-Eq-mTz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="8oV-Zj-kn4"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="YRj-bJ-iyl"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="603"/>
+        </scene>
+        <!--Food View Controller-->
+        <scene sceneID="er5-uw-acZ">
+            <objects>
+                <viewController id="LoR-xY-Hx9" customClass="FoodViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6DE-lR-8RQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53F-5F-5Fz">
+                                <rect key="frame" x="183" y="270.5" width="48" height="30"/>
+                                <state key="normal" title="Leaves"/>
+                                <connections>
+                                    <action selector="pickEatLeaves:" destination="LoR-xY-Hx9" eventType="touchUpInside" id="Xwa-UJ-N91"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAh-La-3Q1">
+                                <rect key="frame" x="189.5" y="382.5" width="35" height="30"/>
+                                <state key="normal" title="Meat"/>
+                                <connections>
+                                    <action selector="pickMeat:" destination="LoR-xY-Hx9" eventType="touchUpInside" id="mOm-Sy-g3m"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrK-FV-heG">
+                                <rect key="frame" x="131.5" y="164" width="151" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UrK-FV-heG" firstAttribute="top" secondItem="8lF-BQ-74c" secondAttribute="top" constant="76" id="4p4-Rr-KaB"/>
+                            <constraint firstItem="53F-5F-5Fz" firstAttribute="top" secondItem="UrK-FV-heG" secondAttribute="bottom" constant="68" id="AYS-Ws-sgd"/>
+                            <constraint firstItem="UrK-FV-heG" firstAttribute="centerX" secondItem="8lF-BQ-74c" secondAttribute="centerX" id="Bgf-07-XOY"/>
+                            <constraint firstItem="MAh-La-3Q1" firstAttribute="centerX" secondItem="8lF-BQ-74c" secondAttribute="centerX" id="G99-al-SXj"/>
+                            <constraint firstItem="53F-5F-5Fz" firstAttribute="centerX" secondItem="8lF-BQ-74c" secondAttribute="centerX" id="q17-th-RL9"/>
+                            <constraint firstItem="MAh-La-3Q1" firstAttribute="top" secondItem="53F-5F-5Fz" secondAttribute="bottom" constant="82" id="tPz-pf-M7e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8lF-BQ-74c"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGa-TB-hNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="603"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3zN-0c-1Ds">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dp3-ce-VfM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1hO-oc-f9r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cD5-oV-ZP4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pQA-LZ-sc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399" y="603"/>
+        </scene>
+    </scenes>
+</document>
