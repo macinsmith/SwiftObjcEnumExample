@@ -109,7 +109,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
-				ORGANIZATIONNAME = Zulily;
+				ORGANIZATIONNAME = TechnicalEdge;
 				TargetAttributes = {
 					451867052379B2FF008B71F6 = {
 						CreatedOnToolsVersion = 10.3;
